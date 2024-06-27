@@ -1,0 +1,22 @@
+#include<stdio.h>
+union job{
+char name[32];
+float salary;
+int worker_no;
+}u;
+struct job1{
+	char name[32];
+	float salary;
+	int worker_no;
+}s;
+int main(){
+	printf("Size of union=%d\n",sizeof(u));
+	printf("Size of structure=%d\n",sizeof(s));
+	return 0;
+}
+
+***********solution**********
+the output of this program
+size of union will be 32 Bytes -> which is the biggest size of data type (char)
+size of structure will be 40 Bytes -> which came from 32 Bytes (char) + 4 Bytes (float) + 4 Bytes (int) assuming no padding 
+
